@@ -6,6 +6,7 @@
 @import "icons";
 @import "fonts";
 @import "highlight";
+
 $breakpoint-large: 960px;
 $breakpoint-medium: 640px;
 $breakpoint-small: 480px;
@@ -14,7 +15,7 @@ $inner: calc(64rem + 8vw);
    Basics
    ========================================================================== */
 :root {
-	--font-primary: 'Fira Sans', sans-serif;
+	--font-primary: 'Cardo', serif;
 	--font-secondary: 'Cardo', serif;
 }
 
@@ -57,12 +58,12 @@ textarea {
 		color: inherit;
 		text-decoration: none;
 		font-weight: 400;
-		box-shadow: inset 0 -2px 0 $color-primary;
+		box-shadow: inset 0 -2px 0 $color-palette-5;
 		transition: all ease-out 0.1s;
 
 		&:focus,
 		&:hover {
-			box-shadow: inset 0 -3px 0 $color-primary-active;
+			box-shadow: inset 0 -3px 0 $color-palette-6;
 		}
 	}
 
@@ -73,7 +74,7 @@ textarea {
 	h5,
 	h6 {
 		line-height: 1.25em;
-		margin: 0 0 4rem;
+		margin: 0 0 1.5rem;
 		text-rendering: optimizeLegibility;
 		color: #000;
 		@media (prefers-color-scheme: dark) {
@@ -116,13 +117,13 @@ textarea {
 
 	p {
 		font-family: var(--font-secondary);
-		margin: 0 0 4rem;
+		margin: 0 0 2.5rem;
 	}
 
 	ol,
 	ul {
 		font-family: var(--font-secondary);
-		margin: 0 0 4rem;
+		margin: 0 0 3rem;
 		padding-left: 2em;
 		box-sizing: border-box;
 	}
@@ -174,7 +175,7 @@ textarea {
 	hr {
 		display: block;
 		height: 1px;
-		margin: 0 0 4rem;
+		margin: 0 0 3rem;
 		padding: 0;
 		background: $color-border;
 		border: 0;
@@ -185,7 +186,7 @@ textarea {
 
 	blockquote {
 		font-family: var(--font-secondary);
-		margin: 0 0 4rem;
+		margin: 0 0 3rem;
 		padding: 0.25em 1em;
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
@@ -227,7 +228,7 @@ textarea {
 
 	dl {
 		font-family: var(--font-secondary);
-		margin: 0 0 4rem;
+		margin: 0 0 3rem;
 		padding-left: 30px;
 	}
 
@@ -277,7 +278,7 @@ textarea {
 
 	pre {
 		position: relative;
-		margin: 0 0 4rem;
+		margin: 0 0 3rem;
 		padding: 1em;
 		overflow: hidden;
 		font-family: monospace, sans-serif;
@@ -359,7 +360,7 @@ textarea {
 		position: relative;
 		width: 100%;
 		max-width: 100%;
-		margin: 0 0 4rem;
+		margin: 0 0 3rem;
 		border: 1px solid $color-border;
 		background: $color-background;
 		@media (prefers-color-scheme: dark) {
@@ -396,11 +397,11 @@ textarea {
 		display: block;
 		max-width: 100%;
 		height: auto;
-		margin: 0 0 4rem;
+		margin: 0 0 3rem;
 	}
 
 	.fluid-width-video-wrapper {
-		margin: 0 0 4rem;
+		margin: 0 0 3rem;
 	}
 
 	form {
@@ -567,7 +568,7 @@ textarea {
 	}
 	// KG Image
 	.kg-image-card {
-		margin: 0 0 4rem;
+		margin: 0 0 3rem;
 		max-width: none !important;
 
 		&.kg-width-wide {
@@ -624,7 +625,7 @@ textarea {
 	}
 	// KG Gallery
 	.kg-gallery-card {
-		margin: 0 0 4rem;
+		margin: 0 0 3rem;
 		max-width: calc(72rem + 24vw) !important;
 		min-width: 100%;
 		width: calc(100vw - 4rem);
@@ -673,7 +674,7 @@ textarea {
 	}
 	// KG Embed
 	.kg-embed-card {
-		margin: 0 0 4rem;
+		margin: 0 0 3rem;
 
 		> * {
 			margin-left: auto;
@@ -683,7 +684,7 @@ textarea {
 	// KG Code
 	.kg-code-card {
 		min-width: 100%;
-		margin: 0 0 4rem;
+		margin: 0 0 3rem;
 	}
 
 	.kg-code-card pre {
@@ -692,7 +693,7 @@ textarea {
 	// KG Bookmark
 	.kg-bookmark-card {
 		width: 100%;
-		margin: 0 0 4rem;
+		margin: 0 0 3rem;
 	}
 
 	.kg-bookmark-container {
@@ -878,7 +879,7 @@ textarea {
    ========================================================================== */
 .blog-header {
 	position: relative;
-	padding-top: calc(16rem + 4vw);
+	padding-top: calc(4rem + 2vw);
 
 	&.has-cover {
 		padding-top: calc(24rem + 8vw);
@@ -895,7 +896,7 @@ textarea {
 	.blog-box {
 		position: relative;
 		z-index: 10;
-		padding-bottom: calc(4rem + 2vw);
+		padding-bottom: calc(2rem + 1vw);
 		text-align: center;
 		border-bottom: 1px solid $color-border;
 		@media (prefers-color-scheme: dark) {
@@ -1421,20 +1422,20 @@ textarea {
 }
 
 .nav-header .logo {
-	margin-right: 3rem;
+	margin-left: auto;
+	margin-right: auto;
+	  
 	@media only screen and (max-width: $breakpoint-medium) {
 		display: none;
 	}
 
 	a {
 		display: block;
-		height: 4rem;
 		padding: 0;
 
 		img {
 			display: block;
 			width: auto;
-			height: 4rem;
 		}
 	}
 }
@@ -1739,8 +1740,8 @@ textarea {
 	position: relative;
 
 	.post .post-box {
-		padding-top: calc(4rem + 2vw);
-		padding-bottom: calc(4rem + 2vw);
+		padding-top: calc(0.5rem + 1vw);
+		padding-bottom: calc(0.5rem + 1vw);
 		border-bottom: 1px solid $color-border;
 		@media (prefers-color-scheme: dark) {
 			border-color: $color-border-dark;
@@ -1774,12 +1775,12 @@ textarea {
    ========================================================================== */
 .post-header {
 	position: relative;
-	padding: calc(16rem + 4vw) 0 calc(2rem + 2vw);
+	padding: calc(2rem + 2vw) 0 calc(1rem + 1vw);
 }
 
 .post-header.has-cover {
-	padding: calc(16rem + 8vw) 0 calc(4rem + 6vw);
-	margin-bottom: calc(4rem + 2vw);
+	padding: calc(8rem + 4vw) 0 calc(2rem + 3vw);
+	margin-bottom: calc(2rem + 2vw);
 	background: #000;
 	overflow: hidden;
 	text-shadow: 0 1px 2px rgba(0,0,0,0.1);
@@ -1871,10 +1872,10 @@ textarea {
 .post-title {
 	position: relative;
 	z-index: 10;
-	margin: 0 0 2rem;
-	font-size: 4em;
+	margin: 0 0 0.2rem;
+	font-size: 3.5em;
 	line-height: 1.25em;
-	font-weight: 700;
+	font-weight: 500;
 	text-indent: -1px;
 	color: #000;
 	@media (prefers-color-scheme: dark) {
@@ -1889,8 +1890,8 @@ textarea {
 }
 
 .post-header .post-title {
-	margin: 0 0 4rem;
-	font-size: 6em;
+	margin: 5rem 0 1rem;
+	font-size: 4em;
 	line-height: 1.25em;
 }
 
@@ -1900,8 +1901,8 @@ textarea {
 
 .post-meta {
 	font-weight: 400;
-	font-size: 1.6em;
-	line-height: 2rem;
+	font-size: 1.5em;
+	
 	color: $color-text-secondary;
 	@media (prefers-color-scheme: dark) {
 		color: $color-text-secondary-dark;
@@ -1921,7 +1922,7 @@ textarea {
 
 .post-header .post-meta {
 	position: relative;
-	padding-bottom: 4rem;
+	padding-bottom: 1rem;
 	z-index: 10;
 
 	&:after {
@@ -2000,9 +2001,9 @@ textarea {
 }
 
 .post-excerpt {
-	margin: 1em 0 0;
+	margin: 0.5em 0 0;
 	font-family: var(--font-secondary);
-	font-size: 2em;
+	font-size: 1.8em;
 	line-height: 1.5em;
 }
 
@@ -2010,8 +2011,8 @@ textarea {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	font-size: 2rem;
-	line-height: 3rem;
+	font-size: 1.8rem;
+	line-height: 2.8rem;
 }
 
 .post-content > * {
