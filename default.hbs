@@ -18,11 +18,11 @@
 
 	<div class="nav-header">
 		<nav class="nav-wrapper" aria-label="{{t "Main"}}">
-				{{#if @site.logo}}
-				<span class="logo">
-					<a href="{{@site.url}}" title="{{t "Home"}}"><img src="{{@site.logo}}" alt="{{t "Logo"}}" /></a>
-				</span>
-				{{/if}}
+			{{#if @site.logo}}
+			<span class="logo">
+				<a href="{{@site.url}}" title="{{t "Home"}}"><img src="{{@site.logo}}" alt="{{t "Logo"}}" /></a>
+			</span>
+			{{/if}}
 		</nav>
 
 		<div class="nav-wrapper-control">
@@ -75,7 +75,7 @@
 		<div class="nav-footer">
 			<nav class="nav-wrapper" aria-label="{{t "Footer"}}">
 				{{#if @site.secondary_navigation}}
-				{{navigation type="secondary"}}
+					{{navigation type="secondary"}}
 				{{else}}
 				<span class="nav-copy">{{@site.title}} &copy; {{date format='YYYY'}}</span>
 				{{/if}}

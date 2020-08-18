@@ -2275,8 +2275,8 @@ textarea {
 .post-nav {
 	position: relative;
 	margin-top: -1px;
-	border-top: 1px solid $color-border;
-	border-bottom: 1px solid $color-border;
+	//border-top: 1px solid $color-border;
+	//border-bottom: 1px solid $color-border;
 	@media (prefers-color-scheme: dark) {
 		border-color: $color-border-dark;
 	}

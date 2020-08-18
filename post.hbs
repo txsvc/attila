@@ -8,14 +8,12 @@
 
 <header class="post-header {{#if feature_image}} has-cover {{/if}}">
 	<div class="inner">
-		<span class="post-info">
-			{{#if tags}}
-			<span class="post-count">{{primary_tag.name}}</span>
-			{{/if}}
-		</span>
 		<h1 class="post-title">{{{title}}}</h1>
 		<div class="post-meta">
-			<time datetime="{{date format='DD-MM-YYYY'}}">{{date format="MMMM DD, YYYY"}}</time> &bull; {{reading_time minute=(t "1 min read") minutes=(t "% min read")}}
+			<time datetime="{{date format='DD-MM-YYYY'}}">{{date format="MMMM DD, YYYY"}}</time> &bull; {{reading_time minute=(t "1 min read") minutes=(t "% min read")}} 
+			{{#if tags}}
+				&bull; tags: {{tags}}
+			{{/if}}
 		</div>
 	</div>
 </header>
@@ -28,29 +26,14 @@
 				{{content}}
 			</section>
 
-			<section class="post-footer">
+			<section class="post-footer"></section>
 
-				{{#if tags}}
-				<aside class="post-tags">
-					<span class="post-info-label">{{t "Topic"}}</span>
-					{{tags separator=" "}}
-				</aside>
-				{{/if}}
-
-			</section>
-
-
-			<section class="post-comments">
-				<a id="show-disqus" class="post-comments-activate">{{t "Show Comments"}}</a>
-			   <div id="disqus_thread"></div>
-			</section>
-
-      {{#if @labs.subscribers}}
-      <section class="post-subscribe">
+			{{#if @labs.subscribers}}
+			<section class="post-subscribe">
 				<p>{{t "Get the latest posts delivered right to your inbox."}}</p>
-        {{subscribe_form placeholder=(t "Your email address") form_class="post-subscribe-form" input_class="post-subscribe-input" button_class="post-subscribe-button"}}
-      </section>
-      {{/if}}
+				{{subscribe_form placeholder=(t "Your email address") form_class="post-subscribe-form" input_class="post-subscribe-input" button_class="post-subscribe-button"}}
+			</section>
+			{{/if}}
 
 			<aside class="post-nav">
 				{{#next_post}}
